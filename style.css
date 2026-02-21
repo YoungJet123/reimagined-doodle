@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.calculator {
+    background-color: #000;
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.display {
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 300;
+    text-align: right;
+    padding: 20px 10px;
+    min-height: 120px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.buttons {
+    display: grid;
+    grid-gap: 10px;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    flex: 1;
+    height: 80px;
+    border-radius: 50%;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.btn-light {
+    background-color: #a5a5a5;
+    color: #000;
+}
+
+.btn-light:active {
+    background-color: #d4d4d4;
+}
+
+.btn-dark {
+    background-color: #333;
+    color: #fff;
+}
+
+.btn-dark:active {
+    background-color: #666;
+}
+
+.btn-orange {
+    background-color: #ff9500;
+    color: #fff;
+}
+
+.btn-orange:active {
+    background-color: #ffb74d;
+}
+
+.btn-zero {
+    border-radius: 40px;
+    flex: 2;
+    justify-content: flex-start;
+    padding-left: 32px;
+}
+
+/* 响应式设计 */
+@media (max-width: 480px) {
+    .calculator {
+        border-radius: 0;
+        height: 100vh;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .display {
+        font-size: 3.5rem;
+        flex: 1;
+    }
+
+    .buttons {
+        flex: 2;
+    }
+
+    .btn {
+        height: 70px;
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 481px) {
+    .calculator {
+        margin: 20px;
+    }
+}
